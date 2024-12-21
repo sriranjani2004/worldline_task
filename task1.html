@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body style="background-color: white; text-align: center; margin: 0; padding: 0;">
+    <div style="display: inline-block; text-align: left; padding: 20px; background-color: #5b4b8a; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); color: white;">
+        <h1 style="text-align: center;">Student Registration Form</h1>
+        <form>
+            <div style="margin-bottom: 10px;">
+                <label for="firstname" style="display: inline-block; width: 150px;">First Name</label>
+                <input type="text" id="firstname" name="firstname" maxlength="30" required>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="lastname" style="display: inline-block; width: 150px;">Last Name</label>
+                <input type="text" id="lastname" name="lastname" maxlength="30" required>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label style="display: inline-block; width: 150px;">Date of Birth</label>
+                <select name="day" required>
+                    <option value="" disabled selected>Day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    
+                </select>
+                <select name="month" required>
+                    <option value="" disabled selected>Month</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    
+                </select>
+                <select name="year" required>
+                    <option value="" disabled selected>Year</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    
+                </select>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="email" style="display: inline-block; width: 150px;">Email ID</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="mobile" style="display: inline-block; width: 150px;">Mobile Number</label>
+                <input type="number" id="mobile" name="mobile" maxlength="10" required>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label style="display: inline-block; width: 150px;">Gender</label>
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="address" style="display: inline-block; width: 150px;">Address</label>
+                <textarea id="address" name="address" rows="3"></textarea>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="city" style="display: inline-block; width: 150px;">City</label>
+                <input type="text" id="city" name="city" maxlength="30">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="pin-code" style="display: inline-block; width: 150px;">Pin Code</label>
+                <input type="number" id="pin-code" name="pin-code" maxlength="6">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="state" style="display: inline-block; width: 150px;">State</label>
+                <input type="text" id="state" name="state" maxlength="30">
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="country" style="display: inline-block; width: 150px;">Country</label>
+                <input type="text" id="country" name="country" value="India" readonly>
+            </div>
+            <div style="margin-bottom: 10px; color: white;">
+                <label style="display: inline-block; width: 150px;">Hobbies</label>
+                <input type="checkbox" id="drawing" name="hobbies" value="Drawing">
+                <label for="drawing">Drawing</label>
+                <input type="checkbox" id="singing" name="hobbies" value="Singing">
+                <label for="singing">Singing</label>
+                <input type="checkbox" id="dancing" name="hobbies" value="Dancing">
+                <label for="dancing">Dancing</label>
+                <input type="text" id="other-hobbies" name="other-hobbies" placeholder="Others">
+            </div>
+            <div style="margin-bottom: 10px; color: white;">
+                <label>Qualification</label>
+                <table style="margin-bottom: 10px; width: 100%;">
+                    <tr>
+                        <th>Examination</th>
+                        <th>Board</th>
+                        <th>Percentage</th>
+                        <th>Year of Passing</th>
+                    </tr>
+                    <tr>
+                        <td>Class X</td>
+                        <td><input type="text" name="cxb"></td>
+                        <td><input type="number" name="cxp" step="0.01"></td>
+                        <td><input type="number" name="cxy"></td>
+                    </tr>
+                    <tr>
+                        <td>Class XI</td>
+                        <td><input type="text" name="cxIb"></td>
+                        <td><input type="number" name="cxIp" step="0.01"></td>
+                        <td><input type="number" name="cxIy"></td>
+                    </tr>
+                    <tr>
+                        <td>Class XII</td>
+                        <td><input type="text" name="cxIb"></td>
+                        <td><input type="number" name="cxIp" step="0.01"></td>
+                        <td><input type="number" name="cxIy"></td>
+                    </tr>
+                </table>
+            </div>
+            <div style="margin-bottom: 10px; color:white;">
+                <label>Courses Applied For</label>
+                <input type="radio" id="bca" name="course" value="BCA">
+                <label for="bca">BCA</label>
+                <input type="radio" id="bcom" name="course" value="B.Com">
+                <label for="bcom">B.Com</label>
+                <input type="radio" id="bsc" name="course" value="B.Sc">
+                <label for="bsc">B.Sc</label>
+                <input type="radio" id="ba" name="course" value="B.A">
+                <label for="ba">B.A</label>
+            </div>
+
+            <br>
+            <div style="text-align: center;">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+

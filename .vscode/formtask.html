@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="scrip1.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Signup Form</h2>
+        <form onsubmit="return validateForm()">
+            <label for="regNo">Registration Number (*)</label>
+            <input type="text" id="regNo" name="regNo" required><br><br>
+
+            <label for="username">Username (*)</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password (*)</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="mobile">Mobile Number (*)</label>
+            <input type="text" id="mobile" name="mobile" required><br><br>
+
+            <label for="dob">Date of Birth (*)</label>
+            <input type="text" id="dob" name="dob" required><br><br>
+
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+</body>
+</html>

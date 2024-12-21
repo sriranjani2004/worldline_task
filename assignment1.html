@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="form-title">
+        <h2>Registration Form</h2>
+    </div>
+
+    <!-- Profile Information Section -->
+    <div class="section">
+        <div class="section-header">Profile Information</div>
+        <div class="form-row">
+            <label for="surname">Surname<span class="required">*</span></label>
+            <input type="text" id="surname" name="surname" placeholder="Enter your surname">
+            
+            <label for="firstname">First Name<span class="required">*</span></label>
+            <input type="text" id="firstname" name="firstname" placeholder="Enter your first name">
+            
+            <label for="email">E-mail<span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address">
+            
+            <label for="confirmemail">Confirm E-mail<span class="required">*</span></label>
+            <input type="email" id="confirmemail" name="confirmemail" placeholder="Confirm your email address">
+        </div>
+        <div class="form-row">
+            <label for="mobile">Mobile No<span class="required">*</span></label>
+            <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number">
+            
+            <label for="confirmobile">Confirm Mobile No<span class="required">*</span></label>
+            <input type="tel" id="confirmobile" name="confirmobile" placeholder="Confirm your mobile number">
+            
+            <label for="password">Password<span class="required">*</span></label>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+            
+            <label for="confirmpassword">Confirm Password<span class="required">*</span></label>
+            <input type="password" id="confirmpassword" name="confirmpassword" placeholder="Confirm your password">
+        </div>
+    </div>
+
+    <!-- Company Information Section -->
+    <div class="section">
+        <div class="section-header">Company Information</div>
+        <div class="form-row">
+            <label for="companyname">Company Name<span class="required">*</span></label>
+            <input type="text" id="companyname" name="companyname" placeholder="Enter your company name">
+            
+            <label for="companyaddress">Company Address<span class="required">*</span></label>
+            <textarea id="companyaddress" name="companyaddress" placeholder="Enter your company address"></textarea>
+            
+            <label for="companyphone">Company Phone<span class="required">*</span></label>
+            <input type="tel" id="companyphone" name="companyphone" placeholder="Enter your company phone number">
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="form-actions">
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
+        <button type="button">Cancel</button>
+    </div>
+</div>
+</body>
+</html>

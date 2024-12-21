@@ -1,0 +1,145 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin: 20px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function checkEmail() {
+            var email = document.getElementById('email').value;
+            var regex = "(?=.*\d)(?=.*[a-z])(?=.*[AZ]).{8,}" ;
+            var res = regex.test(email);
+            if (!res) {
+                alert('Please enter a valid email id');
+            } else {
+                alert('Thank you, valid email id');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Email Validation</h1>
+    <form>
+        <label for="email">Enter your email:</label><br>
+        <input type="text" id="email" placeholder="Enter your email" /><br>
+        <button type="button" onclick="checkEmail()">Submit</button>
+    </form>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email and Password Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 300px;
+            padding: 10px;
+            margin: 20px 0;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            // Email Validation Regex
+            var emailRegex = /^([a-zA-Z0-9_\.\-]+)@([a-zA-Z0-9_\.\-]+)\.([a-zA-Z]{2,5})$/;
+            var isEmailValid = emailRegex.test(email);
+
+            if (!isEmailValid) {
+                alert('Please enter a valid email id');
+                return false;
+            }
+
+            // Password Validation Regex
+            var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            var isPasswordValid = passwordRegex.test(password);
+
+            if (!isPasswordValid) {
+                alert('Password must contain at least 8 characters, including an uppercase letter, a lowercase letter, and a number.');
+                return false;
+            }
+
+            alert('Thank you! Valid email and password.');
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Email and Password Validation</h1>
+    <form>
+        <label for="email">Enter your email:</label><br>
+        <input type="text" id="email" placeholder="Enter your email" /><br>
+
+        <label for="password">Enter your password:</label><br>
+        <input type="password" id="password" placeholder="Enter your password" /><br>
+
+        <button type="button" onclick="validateForm()">Submit</button>
+    </form>
+</body>
+</html>
